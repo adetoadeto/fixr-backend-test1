@@ -19,16 +19,12 @@ conDB();
 dotenv.config();
 const PORT = process.env.PORT;
 const app = express();
-
+const urls =  ["http://localhost:5173", "https://lemon-field-085ef710f.4.azurestaticapps.net", "https://fixr-frontend-testing.onrender.com"]
 // app.use(helmet());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://lemon-field-085ef710f.4.azurestaticapps.net",
-    "https://fixr-frontend-testing.onrender.com/"
-  ],
+  origin: process.env.CLIENT_URL,
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
