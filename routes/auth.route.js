@@ -24,7 +24,7 @@ router.post("/admin-login", adminLogin)
 router.post("/admin-logout", verifyAccessByModel(Admin), adminLogout)
 
 // Session hydration – returns the currently logged-in user (any role)
-router.get("/me", getMe)
+
 
 
 export default router;
