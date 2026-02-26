@@ -24,7 +24,7 @@ const urls =  ["http://localhost:5173", "https://lemon-field-085ef710f.4.azurest
 app.use(cookieParser());
 
 app.use(cors({
-  origin: urls,
+  origin: process.env.CLIENT_URL,
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
