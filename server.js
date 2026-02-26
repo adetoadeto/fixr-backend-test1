@@ -15,8 +15,8 @@ import orderRoute from "./routes/order.route.js";
 import paymentRoute from "./routes/payment.route.js";
 import chatRoute from "./routes/chat.route.js";
 
-dotenv.config();
 conDB();
+dotenv.config();
 const PORT = process.env.PORT;
 const app = express();
 
