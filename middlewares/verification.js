@@ -6,7 +6,6 @@ dotenv.config()
 export const verifyAccessByModel = (Model) => {
  
     return async (req, res, next) => {
-        
         const token = req.cookies["stored_token"];
 
         if (!token) {
@@ -31,8 +30,7 @@ export const verifyAccessByModel = (Model) => {
 };
 
 export const verifyAccessByLogin = async (req, res, next) => {
-   
-         const token = req.cookies["stored_token"];
+        const token = req.cookies["stored_token"];
 
         if (!token) {
             return res.status(401).json({ message: "Login to proceed" });

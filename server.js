@@ -1,8 +1,8 @@
 //import helmet from "helmet";
 import express from "express";
 import cors from "cors";
-import path from "path";
 import cookieParser from "cookie-parser";
+import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 import conDB from "./utils/connectDB.js";
@@ -37,8 +37,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.json());
-
 app.use("/api/uploads", express.static(path.join(__dirname, "uploads")));
+
 app.use("/api/admin", adminRoute)
 app.use("/api/artisan", artisanRoute)
 app.use("/api/auth", authRoute)
@@ -49,5 +49,5 @@ app.use("/api/chat", chatRoute)
 
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log("Server running on port", PORT)
+    console.log("Server running on port", PORT)
 });

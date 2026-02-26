@@ -1,3 +1,4 @@
+  // "seed:artisans": "node seeds/seedArtisans.js" - found in package.json file
 // import mongoose from "mongoose";
 // import bcrypt from "bcryptjs";
 // import dotenv from "dotenv";
