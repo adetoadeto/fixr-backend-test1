@@ -8,7 +8,7 @@ import Admin from "../models/admin.model.js";
 
 import { verifyAccessByModel } from "../middlewares/verification.js";
 import { customerSignUp, customerLogin, customerLogout, adminSignUp, adminLogin, adminLogout, artisanSignUp, artisanLogin, artisanLogout } from "../controllers/auth.controller.js";
-import { getMe } from "../controllers/me.controller.js";
+
 import { upload } from "../utils/util.js";
 
 router.post("/customer-signup", customerSignUp)
